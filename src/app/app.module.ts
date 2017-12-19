@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { BooksListComponent } from './books-list/books-list.component';
 import { BooksItemComponent } from './books-item/books-item.component';
 
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -14,7 +15,8 @@ import { BooksItemComponent } from './books-item/books-item.component';
     BooksItemComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
