@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Book } from '../book';
 import { BookService } from '../book.service';
+import { NgForm } from '@angular/forms';
 
 @Component({
   selector: 'books-list',
@@ -9,8 +10,11 @@ import { BookService } from '../book.service';
 })
 export class BooksListComponent implements OnInit {
 
+  nameSearch: string;
   books: Book[];
-  constructor( private bookService: BookService) { }
+  constructor( private bookService: BookService) { 
+    this.nameSearch ='';
+  }
 
   getBooks(){
   this.books = this.bookService.getBooks();

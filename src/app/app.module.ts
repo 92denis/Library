@@ -1,13 +1,13 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-
+import { FormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
 import { BooksListComponent } from './books-list/books-list.component';
 import { BooksItemComponent } from './books-item/books-item.component';
 
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
-import {MatExpansionModule, MatFormFieldModule} from '@angular/material';
+import {MatExpansionModule, MatFormFieldModule, MatInputModule} from '@angular/material';
 
 import { BookService } from './book.service';
 import { SearchPipe } from './search.pipe';
@@ -23,8 +23,10 @@ import { SearchPipe } from './search.pipe';
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
+    FormsModule,
     MatExpansionModule,
-    MatFormFieldModule
+    MatFormFieldModule,
+    MatInputModule
   ],
   providers: [BookService],
   bootstrap: [AppComponent]
