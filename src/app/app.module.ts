@@ -10,12 +10,14 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {MatExpansionModule, MatFormFieldModule} from '@angular/material';
 
 import { BookService } from './book.service';
+import { SearchPipe } from './search.pipe';
 
 @NgModule({
   declarations: [
     AppComponent,
     BooksListComponent,
-    BooksItemComponent
+    BooksItemComponent,
+    SearchPipe
     
   ],
   imports: [
