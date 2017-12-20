@@ -12,16 +12,25 @@ export class BooksListComponent implements OnInit {
 
   nameSearch: string;
   books: Book[];
+  newBook: Book;
+
   constructor( private bookService: BookService) { 
     this.nameSearch ='';
+    this.newBook = new Book();
   }
 
   getBooks(){
-  this.books = this.bookService.getBooks();
+   this.books = this.bookService.getBooks();
+  }
+
+  addItem(){
+    this.newBook.id = this.books.length != 0 ? this.books[this.books.length -1].id +1 : 1;
+    this.bookService.addBook(this.newBook);
   }
 
   ngOnInit() {
    this.getBooks();
+   console.log(this.books);
   }
 
 }

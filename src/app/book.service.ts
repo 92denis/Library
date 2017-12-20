@@ -47,4 +47,7 @@ export class BookService {
     return this.books;
   }
 
+  addBook(book: Book){
+    return  this.books.push(book);
+  }
 }

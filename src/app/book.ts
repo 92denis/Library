@@ -7,6 +7,7 @@ export class Book {
     public links: string[];
 
     constructor() {
+        this.id = 0;
         this.links = [];
     }
 }
