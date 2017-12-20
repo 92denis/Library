@@ -7,7 +7,7 @@ import { BooksListComponent } from './books-list/books-list.component';
 import { BooksItemComponent } from './books-item/books-item.component';
 
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
-import {MatExpansionModule, MatFormFieldModule, MatInputModule} from '@angular/material';
+import {MatExpansionModule, MatFormFieldModule, MatInputModule,MatListModule} from '@angular/material';
 
 import { BookService } from './book.service';
 import { SearchPipe } from './search.pipe';
@@ -26,7 +26,8 @@ import { SearchPipe } from './search.pipe';
     FormsModule,
     MatExpansionModule,
     MatFormFieldModule,
-    MatInputModule
+    MatInputModule,
+    MatListModule
   ],
   providers: [BookService],
   bootstrap: [AppComponent]
