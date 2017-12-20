@@ -7,7 +7,8 @@ import { BooksListComponent } from './books-list/books-list.component';
 import { BooksItemComponent } from './books-item/books-item.component';
 
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
-import {MatCardModule} from '@angular/material/card';
+import {MatExpansionModule, MatFormFieldModule} from '@angular/material';
+
 import { BookService } from './book.service';
 
 @NgModule({
@@ -20,7 +21,8 @@ import { BookService } from './book.service';
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
-    MatCardModule
+    MatExpansionModule,
+    MatFormFieldModule
   ],
   providers: [BookService],
   bootstrap: [AppComponent]
