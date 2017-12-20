@@ -24,13 +24,13 @@ export class BooksListComponent implements OnInit {
   }
 
   addItem(){
-    this.newBook.id = this.books.length != 0 ? this.books[this.books.length -1].id +1 : 1;
+    // this.newBook.id = this.books.length != 0 ? this.books[this.books.length -1].id +1 : 1;
     this.bookService.addBook(this.newBook);
+    this.newBook = new Book();
   }
 
   ngOnInit() {
    this.getBooks();
-   console.log(this.books);
   }
 
 }

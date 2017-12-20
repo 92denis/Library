@@ -48,6 +48,7 @@ export class BookService {
   }
 
   addBook(book: Book){
-    return  this.books.push(book);
+    book.id = this.books.length != 0 ? this.books[this.books.length -1].id +1 : 1;
+    this.books.push(book);
   }
 }
