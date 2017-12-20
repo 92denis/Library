@@ -7,3 +7,6 @@ img{
 .mat-expansion-panel-header-title  {
    flex: 1;
 }
+.mat-expansion-panel-header-description  {
+    flex: 1;
+ }

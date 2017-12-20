@@ -8,7 +8,7 @@ import { BooksItemComponent } from './books-item/books-item.component';
 import { DialogComponent } from './dialog/dialog.component';
 
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { MatDialogModule, MatExpansionModule, MatFormFieldModule, MatInputModule, MatListModule, MatButtonModule } from '@angular/material';
+import { MatButtonToggleModule, MatDialogModule, MatExpansionModule, MatFormFieldModule, MatInputModule, MatListModule, MatButtonModule, MatIconModule } from '@angular/material';
 import { BookService } from './book.service';
 import { SearchPipe } from './search.pipe';
 
@@ -30,7 +30,9 @@ import { SearchPipe } from './search.pipe';
     MatInputModule,
     MatListModule,
     MatButtonModule,
-    MatDialogModule
+    MatDialogModule,
+    MatButtonToggleModule,
+    MatIconModule
   ],
   entryComponents: [DialogComponent],
   providers: [BookService],
