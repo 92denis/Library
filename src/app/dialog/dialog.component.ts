@@ -11,7 +11,7 @@ import { BookService } from '../book.service';
 export class DialogComponent{
 
   newBook: Book;
-  
+
   constructor(
     public dialogRef: MatDialogRef<DialogComponent>,
     @Inject(MAT_DIALOG_DATA) public data: any, private bookService: BookService) { 
@@ -21,8 +21,10 @@ export class DialogComponent{
   onNoClick(): void {
     this.dialogRef.close();
   }
+
   addItem(){
     this.bookService.addBook(this.newBook);
     this.newBook = new Book();
+
   }
 }

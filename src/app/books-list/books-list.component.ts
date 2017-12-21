@@ -14,7 +14,7 @@ export class BooksListComponent implements OnInit {
 
   nameSearch: string;
   books: Book[];
-
+  
   constructor(private bookService: BookService, public dialog: MatDialog) {
     this.nameSearch = '';
   }
@@ -30,7 +30,7 @@ export class BooksListComponent implements OnInit {
   openDialog(): void {
     this.dialog.open(DialogComponent, {
       width: '250px',
-    });
+     });
   }
 
 }
