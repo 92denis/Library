@@ -47,8 +47,17 @@ export class BookService {
     return this.books;
   }
 
-  addBook(book: Book){
-    book.id = this.books.length != 0 ? this.books[this.books.length -1].id +1 : 1;
+  addBook(book: Book) {
+    book.id = this.books.length != 0 ? this.books[this.books.length - 1].id + 1 : 1;
     this.books.push(book);
+  }
+
+  deleteBook(book: Book) {
+    for (let i = 0; i < this.books.length; i++) {
+      if (this.books[i].id === book.id) {
+        this.books.splice(i, 1);
+        break;
+      }
+    }
   }
 }

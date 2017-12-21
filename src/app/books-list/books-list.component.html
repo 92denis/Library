@@ -1,19 +1,7 @@
-<form (ngSubmit)="addItem(); bookForm.resetForm()" #bookForm='ngForm'>
-    <mat-form-field>
-        <input matInput name="name" [(ngModel)]="newBook.name" #nameBook="ngModel" placeholder="Название книги" required>
-    </mat-form-field>
-    <mat-form-field>
-        <input matInput name="genre" [(ngModel)]="newBook.genre" #genreBook="ngModel" placeholder="Жанр">
-    </mat-form-field>
-    <mat-form-field>
-        <input matInput name="image" [(ngModel)]="newBook.image" #imageBook="ngModel" placeholder="Изображение ">
-    </mat-form-field>
-    <mat-form-field>
-        <input matInput name="description" [(ngModel)]="newBook.description" #descriptionBook="ngModel" placeholder="Описание">
-    </mat-form-field>
+<mat-button-toggle (click)="openDialog()" color="primary">
+    <mat-icon>add</mat-icon>
+</mat-button-toggle>
 
-    <button mat-raised-button type="submit" color="primary" [disabled]="nameBook.invalid || descriptionBook.invalid || genreBook.invalid || imageBook.invalid">Добавить</button>
-</form>
 <form>
     <mat-form-field>
         <input matInput name="nameSearch" [(ngModel)]="nameSearch" placeholder="Поиск по названию или жанру">
